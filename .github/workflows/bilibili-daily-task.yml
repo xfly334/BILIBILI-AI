@@ -5,7 +5,7 @@ on:
   
   workflow_dispatch: # 手动触发
   schedule: # 计划任务触发
-    - cron: '0 16 * * *' 
+    - cron: '0 20 * * *' 
     # cron表达式，时区是UTC时间，比我们早8小时，如上所表示的是每天0点0分（24点整）
     # 建议每个人通过设置 GitHub Environments 的方式来设定为自己的目标运行时间（详细设置方法见文档说明）
     
@@ -64,7 +64,7 @@ jobs:
         Ray_Serilog__WriteTo__5__Args__webHookUrl: ${{secrets.PUSHDINGURL}} # 钉钉
         Ray_Serilog__WriteTo__5__Args__containsTrigger: ${{secrets.PUSHDINGTRIGGER}}
         Ray_Serilog__WriteTo__5__Args__restrictedToMinimumLevel: ${{secrets.PUSHDINGLEVEL}}
-        Ray_Serilog__WriteTo__6__Args__scKey: de569b820035ec78e8c4b3cf2e24dc3f # Server酱
+        Ray_Serilog__WriteTo__6__Args__scKey: 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 # Server酱
         Ray_Serilog__WriteTo__6__Args__containsTrigger: ${{secrets.PUSHSERVERTRIGGER}}
         Ray_Serilog__WriteTo__6__Args__restrictedToMinimumLevel: ${{secrets.PUSHSERVERLEVEL}}
         Ray_Serilog__WriteTo__7__Args__sKey: de569b820035ec78e8c4b3cf2e24dc3f # 酷推
